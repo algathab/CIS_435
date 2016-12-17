@@ -12,37 +12,45 @@ $execStatement -> closeCursor();
 
 <html lang="EN">
 	<head>
-		<title>Community Colors</title>
-		<meta charset="UTF-8"/>
-		<!-- <link rel="stylesheet" href="styles/view_students.css" /> -->
+		<title>Community Color Palettes</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="...\styles/normalize.css" />
+		<link rel="stylesheet" href="..\styles/main.css" />
+		<script src="scripts/colorPicker.js"></script>
 	</head>
 	<body>
-		<h1>Community Picks</h1>
+		<header>
+			
+			<h1>COMMUNITY COLOR PALETTES</h1>
+		</header>
 		
+		<main>
+			<FORM>
+				<INPUT Type="button" class="backButton" VALUE="< Back" onClick="history.go(-1);return true;">
+			</FORM>
+			<table class="communityTable">
+				<tr> 
+					<th div class="firstCol">ID</th>
+					<th>Color1</th>
+					<th>Color2</th>
+					<th>Color3</th>
+					<th>Color4</th>
+					<th>Color5</th>
+				</tr>
 			<?php
-			echo "<table>
-			<tr>
-				<th>Color1</th>
-				<th>Color2</th>
-				<th>Color3</th>
-				<th>Color4</th>
-				<th>Color5</th>
-				<th>ID</th>
-			</tr>";
 			foreach ($colorList as $color_set) {
 				echo "<tr>";
-				echo "<td>" . $color_set['COLOR1'] . "</td>
-				<td>" . $color_set['COLOR2'] . "</td>
-				<td>" . $color_set['COLOR3'] . "</td>
-				<td>" . $color_set['COLOR4'] . "</td>
-				<td>" . $color_set['COLOR5'] . "</td>";
-				echo "<td>" . $color_set['ID'] . "</td>";
+				echo "<td class='firstCol'>" . $color_set['ID'] . "</td>";
+				echo "<td bgcolor='" . $color_set['COLOR1'] . "'></td>
+				<td bgcolor='" . $color_set['COLOR2'] . "'></td>
+				<td bgcolor='" . $color_set['COLOR3'] . "'></td>
+				<td bgcolor='" . $color_set['COLOR4'] . "'></td>
+				<td bgcolor='" . $color_set['COLOR5'] . "'></td>";
 				echo "</tr>";
-			}
-			echo "</table>";
+				}
 			?>
-			<br><a href="../index.php">GO BACK TO HOME PAGE</a>
+			</table>
+		</main>
 	</body>
-
 </html>
 
