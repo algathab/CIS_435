@@ -32,7 +32,7 @@
 		
 		<main>
 			<form method="get" action="index.php" id="colorForm" name="colorForm">
-				<table>
+				<table id="colorsTable">
 					<tr class="colorBlock">
 						<div>
 							<td><input type="color" id="color1" name="color1" value="<?php echo $color1; ?>"></td>
@@ -52,59 +52,59 @@
 					</tr>
 					<tr class="slider">
 						<td>
-							R: <input class="red" type="range" min="0" max="255" /> <span id="r1">0</span>
+							R: <input class="red" type="range" min="0" max="255" /> <span id="r1">128</span>
 						</td>
 						<td>
-							R: <input class="red" type="range" min="0" max="255" /> <span id="r2">0</span>
+							R: <input class="red" type="range" min="0" max="255" /> <span id="r2">128</span>
 						</td>
 						<td>
-							R: <input class="red" type="range" min="0" max="255" /> <span id="r3">0</span>
+							R: <input class="red" type="range" min="0" max="255" /> <span id="r3">128</span>
 						</td>
 						<td>
-							R: <input class="red" type="range" min="0" max="255" /> <span id="r4">0</span>
+							R: <input class="red" type="range" min="0" max="255" /> <span id="r4">128</span>
 						</td>
 						<td>
-							R: <input class="red" type="range" min="0" max="255" /> <span id="r5">0</span>
-						</td>
-					</tr>
-					<tr class="slider">
-						<td>
-							G: <input class="green" type="range" min="0" max="255" /> <span id="g1">0</span>
-						</td>
-						<td>
-							G: <input class="green" type="range" min="0" max="255" /> <span id="g2">0</span>
-						</td>
-						<td>
-							G: <input class="green" type="range" min="0" max="255" /> <span id="g3">0</span>
-						</td>
-						<td>
-							G: <input class="green" type="range" min="0" max="255" /> <span id="g4">0</span>
-						</td>
-						<td>
-							G: <input class="green" type="range" min="0" max="255" /> <span id="g5">0</span>
+							R: <input class="red" type="range" min="0" max="255" /> <span id="r5">128</span>
 						</td>
 					</tr>
 					<tr class="slider">
 						<td>
-							B: <input class="blue" type="range" min="0" max="255" /> <span id="b1">0</span>
+							G: <input class="green" type="range" min="0" max="255" /> <span id="g1">128</span>
 						</td>
 						<td>
-							B: <input class="blue" type="range" min="0" max="255" /> <span id="b2">0</span>
+							G: <input class="green" type="range" min="0" max="255" /> <span id="g2">128</span>
 						</td>
 						<td>
-							B: <input class="blue" type="range" min="0" max="255" /> <span id="b3">0</span>
+							G: <input class="green" type="range" min="0" max="255" /> <span id="g3">128</span>
 						</td>
 						<td>
-							B: <input class="blue" type="range" min="0" max="255" /> <span id="b4">0</span>
+							G: <input class="green" type="range" min="0" max="255" /> <span id="g4">128</span>
 						</td>
 						<td>
-							B: <input class="blue" type="range" min="0" max="255" /> <span id="b5">0</span>
+							G: <input class="green" type="range" min="0" max="255" /> <span id="g5">128</span>
+						</td>
+					</tr>
+					<tr class="slider">
+						<td>
+							B: <input class="blue" type="range" min="0" max="255" /> <span id="b1">128</span>
+						</td>
+						<td>
+							B: <input class="blue" type="range" min="0" max="255" /> <span id="b2">128</span>
+						</td>
+						<td>
+							B: <input class="blue" type="range" min="0" max="255" /> <span id="b3">128</span>
+						</td>
+						<td>
+							B: <input class="blue" type="range" min="0" max="255" /> <span id="b4">128</span>
+						</td>
+						<td>
+							B: <input class="blue" type="range" min="0" max="255" /> <span id="b5">128</span>
 						</td>
 					</tr>
 				</table>
 				<br>
 				<input class="button" id="submit" name="submit" type="submit" value="Save Pallette">
-				<input class="button" id="random" name="random" type="button" value="Random Palette">
+				<button class="button" id="random" name="random" type="button">Random Palette</button>
 				<button class="button" id="community" name="community"><a href="php/view_community.php">View Community Palettes</a></button>	
 			</form>
 			
