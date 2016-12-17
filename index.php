@@ -14,7 +14,7 @@
 		$color5 = $_GET['color5'];
 	}
 ?>
-
+ 
 
 <html lang="en">
 	<head>
