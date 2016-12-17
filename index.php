@@ -22,7 +22,7 @@
 
 <html lang="en">
 	<head>
-		<title>COLOR PICKER</title>
+		<title>Color Palette Generator</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="styles/normalize.css" />
 		<link rel="stylesheet" href="styles/main.css" />
@@ -31,12 +31,12 @@
 
 	<body>
 		<header>
-			<h1>PICK COLORS</h1>
+			<h1>COLOR PALETTE GENERATOR</h1>
 		</header>
 		
 		<main>
 			<form method="get" action="index.php" id="colorForm" name="colorForm">
-				<table border="1px black" id="pickerTable">
+				<table>
 					<tr class="colorBlock">
 						<div>
 							<td><input type="color" id="color1" name="color1" value="<?php echo $color1; ?>"></td>
@@ -106,22 +106,22 @@
 						</td>
 					</tr>
 				</table>
-				<td colspan="5"><input id="submit" name="submit" type="submit" value="submit">
+				<br>
+				<input class="button" id="submit" name="submit" type="submit" value="Save Pallette">
+				<input class="button" id="random" name="random" type="button" value="Random Palette">
 			</form>
+			
 
-			<?php
-				if (isset($_GET['submit']))
-				{
-					echo "<br><br>";
-					//var_dump($_GET);
-					echo "<br>";
-					require ('php/insert.php');
-				} 
-				else 
-				{
-					echo "<p>Not Inserted</p>";
-				}
-			?>
+			<?php if (isset($_GET['submit']))
+					{
+						echo <br><br>;
+						echo <br>;
+						require ('php/insert.php');
+					} 
+					else 
+					{
+						echo "<p>Not Inserted</p>";
+					} ?>
 
 			<br>
 			<a class="larger"  href="php/view_community.php">View Community Color picks</a>
